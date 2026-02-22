@@ -1,0 +1,327 @@
+/* General Styles */
+body {
+  font-family: monospace, lucida-console;
+  color: #fff;
+  margin: 0; /* Removes default margin around the body */
+  padding: 0; /* Removes default padding around the body */
+  text-align: left; /* Aligns text to the left */
+  background-color: #444;
+  
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0; /* Adds 10px padding to the top and bottom of the header */
+  text-align: center;
+  border: 1px solid yellow; /* Adds a black border around the navigation */
+}
+
+nav {
+  margin: 0; /* Removes the default margin around the navigation */
+  padding: 10px; /* Adds 10px of padding inside the navigation bar */
+  border: 1px solid black; /* Adds a black border around the navigation */
+  background-color: #444;
+  text-align: center;
+}
+
+nav a, #join-button {
+  color: #fff;
+  text-decoration: none; /* Removes the underline from the links */
+  margin: 0.5em; /* Adds a margin of 0.5em around each link/button */
+  padding: 0.5em 1em; /* Adds vertical (0.5em) and horizontal (1em) padding inside links/buttons */
+  border: 1px solid yellow;
+  border-radius: 5px;
+  display: inline-block; /* Makes links and buttons behave like block elements but inline */
+  transition: transform 0.2s ease-in-out; /* Smooth scale effect when hovered */
+  font-family: "Lucida Console", monospace;
+}
+
+nav a:hover, #join-button:hover {
+  transform: scale(1.1); /* Enlarges the link/button when hovered (scale by 1.1) */
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center; /* Centers the footer text */
+  padding: 10px 0; /* Adds 10px padding to the top and bottom of the footer */
+  position: fixed; /* Fixes the footer to the bottom of the page */
+  width: 100%; /* Makes the footer span the full width of the page */
+  bottom: 0; /* Positions the footer at the bottom of the page */
+}
+
+/* Hero Section */
+@keyframes gradient-animation {
+  0% { background-position: 0% 50%; } /* Start position of the gradient background */
+  50% { background-position: 100% 50%; } /* Midway point of gradient animation */
+  100% { background-position: 0% 50%; } /* End position of gradient */
+}
+
+
+section#hero {
+  display: flex; /* Enables a flexbox layout to align items in the hero section */
+  justify-content: space-between; /* Distributes items evenly across the section */
+  align-items: center; /* Vertically aligns the items in the center */
+  border: 1px solid yellow; /* Adds a yellow border around the section */
+  background: linear-gradient(-45deg, #febc6e , #e3cb00 , #f28400 , #faeb6c ); /* Sets a colorful gradient background */
+  background-size: 400% 400%; /* Makes the gradient background large for animation */
+  animation: gradient-animation 8s ease infinite; /* Applies the gradient animation */
+  color: #fff; /* White text color */
+  text-shadow: -1px -1px 0 #61616134, 1px -1px 0 #5f5f5f, -1px 1px 0 #7a7a7a93, 1px 1px 0 #5a5a5a70;
+  height: 40vh; /* Sets the section height to 40% of the viewport height */
+  padding: 0 10vw; /* Adds horizontal padding equal to 10% of the viewport width */
+  position: relative; /* Necessary for positioning child elements absolutely within the section */
+  overflow: hidden; /* Hides any content that exceeds the section boundaries */
+}
+
+section#hero .hero-content {
+  max-width: 50%;
+}
+
+section#hero .hero-image {
+  position: absolute; /* Absolute positioning to keep image fixed within the container */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 600px;
+  display: flex;
+  justify-content: center; /* Centers the image */
+  align-items: center; /* Centers the image vertically */
+  overflow: hidden; /* Ensures the image doesn’t overflow */
+}
+
+section#hero .hero-image img {
+  object-fit: contain; /* Ensures the image fits inside the container without stretching */
+  max-width: 100%; /* Restricts the width */
+  max-height: 100%; /* Restricts the height */
+  width: auto;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  section#hero .hero-content {
+      max-width: 100%;
+  }
+
+  section#hero .hero-image {
+      max-width: 100%;
+      max-height: 100%; /* Keep image within the container bounds */
+  }
+}
+
+#button {
+  background: linear-gradient(to left, #ffab46, #FF5733); /* Gradient from yellow to orange */
+  color: #fff; /* White text */
+  border: 1px solid black;
+  padding: 10px 20px; /* Internal padding */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor */
+  border-radius: 25px; /* Rounded corners */
+transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition effect on hover */
+}
+
+/* Reviews Section */
+.reviews-section {
+  display: flex; /* Uses flexbox for layout */
+  justify-content: space-between; /* Distributes review cards evenly */
+  gap: 10px; /* Adds a gap of 10px between each review card */
+  padding: 100px 300px; /* Adds padding: 100px top/bottom, 300px left/right */
+  background-color: #222; /* Dark background color for reviews */
+}
+.toprev {
+    display: flex;
+    color: #FFD700;
+    background-color: #222; 
+    justify-content: center;
+
+}
+
+.review-card {
+  width: 400px; /* Sets a fixed width for each review card */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Adds shadow to the cards for depth */
+  
+}
+
+/* Image container inside review card */
+.image-container {
+  position: relative; /* Necessary for overlaying content on top of the image */
+  width: 100%; /* Makes the container take up 100% width */
+  height: 600px; /* Fixed height for the image */
+}
+
+
+/* Image styles inside the review card */
+.image-container img {
+  width: 100%; /* Makes image span full width of its container */
+  height: 100%; /* Makes image span full height of its container */
+  object-fit: cover; /* Ensures the image covers the container, cropping if necessary */
+  transition: opacity 0.3s ease; /* Smooth transition effect for opacity on hover */
+  border-radius: 5px; /* Rounds the corners of the image */
+}
+
+/* Overlay layer that appears on hover */
+.overlay {
+  position: absolute; /* Absolute positioning for overlay */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
+  opacity: 0; /* Initially invisible */
+  display: flex; /* Flexbox to center text */
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Centers the content vertically */
+  transition: opacity 0.3s ease; /* Fade effect on opacity change */
+}
+
+/* Text inside the overlay */
+.text-overlay {
+  text-align: center;
+  color: white;
+}
+
+.text-overlay h3 {
+  margin: 0;
+  font-size: 24px;
+  color: #FFD700;
+}
+
+.text-overlay p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.text-overlay .username {
+  font-size: 14px;
+  color: #bbb;
+}
+
+/* Hover effect */
+.image-container:hover img {
+  opacity: 0.7; /* Darkens the image on hover */
+}
+
+.image-container:hover .overlay {
+  opacity: 1; /* Shows the overlay with text on hover */
+}
+
+/* Video Section */
+#video-section {
+    background: #222; /* Dark gray background */
+    padding: 80px 300px; /* Adds extra space around the video section (80px top/bottom, 300px left/right) */
+    display: flex; /* Uses Flexbox for layout */
+    justify-content: center; /* Centers content horizontally within the section */
+}
+
+/* Container for Video and Text */
+.video-content {
+    display: flex; /* Flexbox layout for video and text */
+    align-items: center; /* Vertically aligns items in the center */
+    justify-content: space-between; /* Distributes space between video and text */
+    gap: 40px; /* Adds 40px gap between video and text */
+    max-width: 1000px; /* Limits the container's maximum width to 1000px */
+    width: 100%; /* Makes the container take up full width */
+}
+
+/* Text Block in Video Section */
+.video-info {
+    max-width: 400px; /* Limits the width of the text block */
+    padding: 20px; /* Adds 20px padding inside the text block */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Semi-transparent white border around the text block */
+    border-radius: 10px; /* Rounded corners for the text block */
+    background: rgba(0, 0, 0, 0.2); /* Light dark background for the text block */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Adds shadow to give a 3D effect */
+}
+
+/* Upcoming Game Text */
+.upcoming-text {
+    font-size: 22px; 
+    color: #FFD700; 
+    text-transform: uppercase; /* Transforms text to uppercase */
+    margin-bottom: 10px; /* Adds 10px margin at the bottom */
+}
+
+/* Game Title */
+.game-title {
+    font-size: 28px; /* Font size for the game title */
+    color: white; /* White text color */
+    text-transform: uppercase; /* Makes the title uppercase */
+    margin-bottom: 10px; /* Adds 10px margin below the title */
+}
+
+/* Game Description */
+.game-description {
+    font-size: 16px; /* Font size for the description */
+    color: white; 
+    line-height: 1.4; /* Sets the line height to make the text more readable */
+}
+
+/* Video Container */
+.video-container {
+    width: 600px; /* Fixed width for the video container */
+    height: 320px; /* Fixed height for the video container */
+    background-color: black; 
+    border-radius: 10px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Adds shadow for depth effect */
+}
+
+#video-player {
+    width: 100%; 
+    height: 100%; 
+    border-radius: 10px; /* Rounds the corners of the video player */
+}
+
+/* Discord Section */
+#discord-section {
+    background: #222; 
+    padding: 60px 300px; /* Adds padding: 60px top/bottom, 300px left/right */
+    display: flex; /* Uses Flexbox layout for the section */
+    justify-content: center; /* Centers the Discord content horizontally */
+}
+
+/* Container for Discord Content */
+.discord-content {
+    display: flex; /* Flexbox layout for Discord content */
+    align-items: center; /* Vertically aligns the content */
+    gap: 20px; /* Adds 20px gap between the image and text */
+    padding: 20px; /* Adds 20px padding inside the Discord content container */
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Semi-transparent white border around the container */
+    border-radius: 10px; 
+    background: rgba(0, 0, 0, 0.2); /* Light dark background for the container */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.226); /* Adds shadow for depth effect */
+    max-width: 600px; 
+    width: 100%; 
+}
+
+/* Discord Image */
+.discord-image img {
+    width: 80px; /* Fixed width for the Discord image */
+    height: 80px; /* Fixed height for the Discord image */
+    border-radius: 50%; 
+    border: 2px solid white; /* White border around the image */
+}
+
+/* Text for Discord */
+.discord-text h2 {
+    text-decoration: none; /* Removes underline from the heading */
+    font-size: 22px; /* Font size for the heading */
+    color: #FFD700; 
+    margin: 0; /* Removes default margin from the heading */
+}
+
+.discord-text p {
+  font-size: 18px;
+  color: white;
+  margin: 5px 0 0; /* Adds 5px margin on top and removes margin below */
+  text-decoration: none; /* Removes underline */
+}
+
+/* Add hover effect for the link */
+.discord-link:hover p {
+  color: #FFD700;
+}
+
+.discord-link {
+  text-decoration: none; /* Removes the underline from the link */
+}

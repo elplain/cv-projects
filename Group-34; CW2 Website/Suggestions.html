@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Play Tested - Suggest a game</title>
+  <link rel="stylesheet" href="Suggestions.css">
+
+  <script src="Suggestions.js"></script>
+  <link rel="icon" href="Logo/logoclear.png" type="image/png">
+
+    <!-- JavaScript -->
+  <script src="Suggestions.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="Join Function.js"></script>
+
+</head>
+
+
+
+<body>
+  <!-- Top Navigation / Header -->
+  <header>
+
+    <div style="display: flex; align-items: center; justify-content: center;">
+        <img src="Logo/logoclear.png" alt="Play Tested Logo" style="height: 100px; margin-right: 10px;">
+        <h1>Play Tested</h1>
+    </div>
+
+    <nav>
+      <a href="Home.html">Home</a>
+      <a href="reviewpage1.2.html">Reviews</a>
+      <a href="picks.html">Our Picks</a>
+      <a href="Suggestions.html">Suggest a game!</a>
+    </nav>
+
+  </header>
+
+
+  <!-- Suggestion Page Banner -->
+  <section class="SuggestionBanner">
+
+    <div class="overlay-container"></div>
+
+      <div class="slider">
+        <div class="slide" style="background-image: url('Thumbnails/elden-ring-nightreign-HD-scaled.jpg');"></div>
+        <div class="slide" style="background-image: url('Thumbnails/doom-the-dark-ages.jpg');"></div>
+        <div class="slide" style="background-image: url('Thumbnails/Expedition-33-Main-Artwork.jpg');"></div>
+      </div>
+
+      <div class="dark-overlay"></div>
+
+    </div>
+
+    <div class="banner-text">
+      <h2>Make A Suggestion!</h2>
+      <p>Leave us your thoughts on which game we should review next.</p>
+    </div>
+    
+  </section>
+
+  <!-- Suggestion Page About/Info -->
+  <section class="SuggestionAbout">
+    <P>
+      Do you have a game that has interested you lately? Or even a game that you've already played but want our opinion on it? Use the form below to make a suggestion on which game we should play and review next. Submit your idea and stay tuned for our analysis!
+    </P>
+
+  </section>
+
+  <!-- Suggestion Form Content -->
+  <section class="SuggestionForm">
+
+    <form id="suggestForm">
+      <!-- Username (Optional) -->
+      <label for="username">Username (optional)</label>
+      <input type="text" id="username" name="username"
+             pattern="[A-Za-z0-9\s]{2,}"
+             title="Only letters, numbers and spaces. Minimum 2 characters.">
+  
+      <!-- Game Title -->
+      <label for="title">Game Title *</label>
+      <input type="text" id="title" name="title" required
+             pattern="[A-Za-z0-9\s]{2,}"
+             title="Only letters, numbers and spaces. Minimum 2 characters.">
+  
+      <!-- Game Genre -->
+      <label for="genre">Game Genre *</label>
+      <select id="genre" name="genre" required>
+
+        <option value="" disabled selected>Select a genre</option>
+
+        <option>Action</option>
+        <option>RPG</option>
+        <option>Strategy</option>
+        <option>Adventure</option>
+        <option>Sports</option>
+        <option>Other</option>
+
+      </select>
+  
+      <!-- Game Platform -->
+      <label for="platform">Game Platform *</label>
+      <select id="platform" name="platform" required>
+
+        <option value="" disabled selected>Select a platform</option>
+
+        <option>PC</option>
+        <option>Xbox</option>
+        <option>PlayStation</option>
+        <option>Nintendo Switch</option>
+        <option>Mobile</option>
+        <option>Other</option>
+
+      </select>
+  
+      <!-- Additional Message Area -->
+      <label for="message">Additional Message (optional)</label>
+      <textarea id="message" name="message"
+        placeholder="Info on the game and why you think we should review it."
+        maxlength="500"></textarea>
+  
+      <!-- User Email -->
+      <label for="email">Email (optional)</label>
+      <input 
+        type="email" id="email" name="email"
+        placeholder="masterchief@mail.com">
+  
+      <!-- Submittion Button -->
+      <button type="submit">Submit Suggestion</button>
+
+    </form>
+
+  </section>
+
+  <!-- Suggestion Page - Review coming soon -->
+  <section class="SuggestionSoon">
+    <P>
+      We will review the games suggested to us as soon as possible, Thanks again!
+    </P>
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; 2025 Play Tested | All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

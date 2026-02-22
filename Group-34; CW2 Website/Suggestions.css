@@ -1,0 +1,290 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+/*//// Base Styles ////*/
+body {
+  font-family: "Lucida Console", monospace;
+  background-color: #444;  /* Dark background */
+  color: #fff;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1em 0;
+  position: relative;
+  border: 2px solid yellow;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  background-color: #444;
+}
+
+nav a, #join-button {
+  color: #fff;
+  text-decoration: none;
+  margin: 0.5em;
+  padding: 0.5em 1em;
+  border: 1px solid yellow;
+  border-radius: 5px;
+  display: inline-block;
+  transition: transform 0.2s ease-in-out;
+  font-family: "Lucida Console", monospace;
+}
+
+nav a:hover, #join-button:hover {
+  transform: scale(1.1);
+}
+
+
+
+/*/////////// SP - General //////////////*/
+.SuggestionForm {
+  margin: 40px 50px;
+}
+.SuggestionBanner {
+  padding: 0px;
+  margin: 0px;
+}
+
+
+
+/*////////// SP - Banner ////////////*/
+.SuggestionBanner h2 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.SuggestionBanner p {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.SuggestionBanner {
+  position: relative;
+  height: 40vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+
+/*/////////// SP - Banner Overlay //////////////*/
+.overlay-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+.dark-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4); /* adjust for more/less darkness */
+  z-index: 1;
+}
+
+
+
+/*///////// SP - Banner Slide //////////////*/
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.slide {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: fade 12s infinite;
+}
+
+.slide:nth-child(1) {
+  animation-delay: 0s;
+}
+.slide:nth-child(2) {
+  animation-delay: 4s;
+}
+.slide:nth-child(3) {
+  animation-delay: 8s;
+}
+
+@keyframes fade {
+  0% { opacity: 0; }
+  8% { opacity: 1; }
+  30% { opacity: 1; }
+  38% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+
+
+/*////////// SP - Banner Text ////////////*/
+.banner-text {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.6);
+}
+
+.banner-text h1 {
+  font-size: 3rem;
+}
+
+.banner-text p {
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .banner-text h1 {
+    font-size: 2rem;
+  }
+  .banner-text p {
+    font-size: 1rem;
+  }
+}
+
+
+
+/*////////// SP - Intro ///////////*/
+.SuggestionAbout {
+  margin-top: 5vh;
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.SuggestionAbout p {
+  max-width: 600px;
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+}
+
+
+
+/*////////// SP - Form ////////////*/
+form {
+  margin: auto;
+  padding: 2rem;
+  background: #303030;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+label {
+  margin-top: 1rem;
+  display: block;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus,
+select:focus {
+  outline: none; /* gets rid of the default outline */
+  border: 2px solid #ffd900; /* border colour of selected element */
+  box-shadow: 0 0 5px rgba(255, 255, 0, 0.377); /* adds soft glow */
+  transition: 0.2s ease-in-out;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+button {
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: yellow;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: rgb(20, 20, 20);
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+  background-color: rgb(235, 192, 0);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+
+
+/*/////////// SP - Review Coming Soon ////////////*/
+.SuggestionSoon {
+  margin: 10vh 0vh;
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.SuggestionSoon p {
+  max-width: 400px;
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+}
+
+
+
+/*//////////// Footer //////////*/
+.site-footer {
+  background-color: #333;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}

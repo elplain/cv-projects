@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play Tested - Reviews</title>
+    <link rel="stylesheet" href="reviewpage1.2.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="JoinFunction.js"></script>
+    <link rel="icon" href="Logo/logoclear.png" type="image/png">
+</head>
+<body>
+  <!-- Top Navigation / Header -->
+  <header>
+    <div style="display: flex; align-items: center; justify-content: center;">
+        <img src="Logo/logoclear.png" alt="Play Tested Logo" style="height: 100px; margin-right: 10px;">
+        <h1>Play Tested</h1>
+    </div>
+    <nav>
+      <a href="Home.html">Home</a>
+      <a href="reviewpage1.2.html">Reviews</a>
+      <a href="picks.html">Our Picks</a>
+      <a href="Suggestions.html">Suggest a game!</a>
+    </nav>
+</header>
+
+  <!-- Main Content Area -->
+  <main>
+    <section class="game-section">
+      <h2>Leave a Review</h2>
+      <!-- Filter and Search Controls -->
+      <div class="controls">
+        <select id="filter">
+          <option value="all">All Genres</option>
+          <option value="action">Action</option>
+          <option value="adventure">Adventure</option>
+          <option value="puzzle">Puzzle</option>
+          <option value="rpg">RPG</option>
+        </select>
+        <input type="text" id="search" placeholder="Search for a game...">
+      </div>
+      <!-- Horizontally scrolling game cards -->
+      <div class="game-scroller">
+        <!-- Game Card 1 -->
+        <div class="game-card" data-genre="action" data-title="Assassins Creed Shadows">
+          <img src="Thumbnails/acshadows.jpg" alt="Game 1" class="game-image" />
+          <p>Assassins Creed Shadows</p>
+          <div class="review-form-container" style="display: none;">
+            <form class="review-form">
+              <div class="star-rating">
+                <input type="radio" id="star5-game1" name="rating-game1" value="5" />
+                <label for="star5-game1" title="5 stars">&#9733;</label>
+                <input type="radio" id="star4-game1" name="rating-game1" value="4" />
+                <label for="star4-game1" title="4 stars">&#9733;</label>
+                <input type="radio" id="star3-game1" name="rating-game1" value="3" />
+                <label for="star3-game1" title="3 stars">&#9733;</label>
+                <input type="radio" id="star2-game1" name="rating-game1" value="2" />
+                <label for="star2-game1" title="2 stars">&#9733;</label>
+                <input type="radio" id="star1-game1" name="rating-game1" value="1" />
+                <label for="star1-game1" title="1 star">&#9733;</label>
+              </div>
+              <label for="review1">Write your review:</label>
+              <textarea id="review1" name="review" rows="3" placeholder="Enter review..."></textarea>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+        <!-- Game Card 2 -->
+        <div class="game-card" data-genre="adventure" data-title="Skyrim">
+          <img src="Thumbnails/skyrim.jpg" alt="Game 2" class="game-image" />
+          <p>Skyrim</p>
+          <div class="review-form-container" style="display: none;">
+            <form class="review-form">
+              <div class="star-rating">
+                <input type="radio" id="star5-game2" name="rating-game2" value="5" />
+                <label for="star5-game2" title="5 stars">&#9733;</label>
+                <input type="radio" id="star4-game2" name="rating-game2" value="4" />
+                <label for="star4-game2" title="4 stars">&#9733;</label>
+                <input type="radio" id="star3-game2" name="rating-game2" value="3" />
+                <label for="star3-game2" title="3 stars">&#9733;</label>
+                <input type="radio" id="star2-game2" name="rating-game2" value="2" />
+                <label for="star2-game2" title="2 stars">&#9733;</label>
+                <input type="radio" id="star1-game2" name="rating-game2" value="1" />
+                <label for="star1-game2" title="1 star">&#9733;</label>
+              </div>
+              <label for="review2">Write your review:</label>
+              <textarea id="review2" name="review" rows="3" placeholder="Enter review..."></textarea>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+        <!-- Game Card 3 -->
+        <div class="game-card" data-genre="adventure" data-title="Elden Ring">
+          <img src="Thumbnails/eldenring.jpg" alt="Game 3" class="game-image" />
+          <p>Elden Ring</p>
+          <div class="review-form-container" style="display: none;">
+            <form class="review-form">
+              <div class="star-rating">
+                <input type="radio" id="star5-game3" name="rating-game3" value="5" />
+                <label for="star5-game3" title="5 stars">&#9733;</label>
+                <input type="radio" id="star4-game3" name="rating-game3" value="4" />
+                <label for="star4-game3" title="4 stars">&#9733;</label>
+                <input type="radio" id="star3-game3" name="rating-game3" value="3" />
+                <label for="star3-game3" title="3 stars">&#9733;</label>
+                <input type="radio" id="star2-game3" name="rating-game3" value="2" />
+                <label for="star2-game3" title="2 stars">&#9733;</label>
+                <input type="radio" id="star1-game3" name="rating-game3" value="1" />
+                <label for="star1-game3" title="1 star">&#9733;</label>
+              </div>
+              <label for="review3">Write your review:</label>
+              <textarea id="review3" name="review" rows="3" placeholder="Enter review..."></textarea>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+        <!-- Game Card 4 -->
+        <div class="game-card" data-genre="rpg" data-title="Black myth Wukong">
+          <img src="Thumbnails/blackmythwukong.jpg" alt="Game 4" class="game-image" />
+          <p>Black Myth Wukong</p>
+          <div class="review-form-container" style="display: none;">
+            <form class="review-form">
+              <div class="star-rating">
+                <input type="radio" id="star5-game4" name="rating-game4" value="5" />
+                <label for="star5-game4" title="5 stars">&#9733;</label>
+                <input type="radio" id="star4-game4" name="rating-game4" value="4" />
+                <label for="star4-game4" title="4 stars">&#9733;</label>
+                <input type="radio" id="star3-game4" name="rating-game4" value="3" />
+                <label for="star3-game4" title="3 stars">&#9733;</label>
+                <input type="radio" id="star2-game4" name="rating-game4" value="2" />
+                <label for="star2-game4" title="2 stars">&#9733;</label>
+                <input type="radio" id="star1-game4" name="rating-game4" value="1" />
+                <label for="star1-game4" title="1 star">&#9733;</label>
+              </div>
+              <label for="review4">Write your review:</label>
+              <textarea id="review4" name="review" rows="3" placeholder="Enter review..."></textarea>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+        <!-- Game Card 5 -->
+        <div class="game-card" data-genre="adventure" data-title="Minecraft">
+          <img src="Thumbnails/minecraft.jpg" alt="Game 5" class="game-image" />
+          <p>Minecraft</p>
+          <div class="review-form-container" style="display: none;">
+            <form class="review-form">
+              <div class="star-rating">
+                <input type="radio" id="star5-game5" name="rating-game5" value="5" />
+                <label for="star5-game5" title="5 stars">&#9733;</label>
+                <input type="radio" id="star4-game5" name="rating-game5" value="4" />
+                <label for="star4-game5" title="4 stars">&#9733;</label>
+                <input type="radio" id="star3-game5" name="rating-game5" value="3" />
+                <label for="star3-game5" title="3 stars">&#9733;</label>
+                <input type="radio" id="star2-game5" name="rating-game5" value="2" />
+                <label for="star2-game5" title="2 stars">&#9733;</label>
+                <input type="radio" id="star1-game5" name="rating-game5" value="1" />
+                <label for="star1-game5" title="1 star">&#9733;</label>
+              </div>
+              <label for="review5">Write your review:</label>
+              <textarea id="review5" name="review" rows="3" placeholder="Enter review..."></textarea>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+        <!-- Game Card 6 -->
+        <div class="game-card" data-genre="puzzle" data-title="Portal 2">
+          <img src="Thumbnails/portal2.jpg" alt="Game 6" class="game-image" />
+          <p>Portal 2</p>
+          <div class="review-form-container" style="display: none;">
+            <form class="review-form">
+              <div class="star-rating">
+                <input type="radio" id="star5-game6" name="rating-game6" value="5" />
+                <label for="star5-game6" title="5 stars">&#9733;</label>
+                <input type="radio" id="star4-game6" name="rating-game6" value="4" />
+                <label for="star4-game6" title="4 stars">&#9733;</label>
+                <input type="radio" id="star3-game6" name="rating-game6" value="3" />
+                <label for="star3-game6" title="3 stars">&#9733;</label>
+                <input type="radio" id="star2-game6" name="rating-game6" value="2" />
+                <label for="star2-game6" title="2 stars">&#9733;</label>
+                <input type="radio" id="star1-game6" name="rating-game6" value="1" />
+                <label for="star1-game6" title="1 star">&#9733;</label>
+              </div>
+              <label for="review6">Write your review:</label>
+              <textarea id="review6" name="review" rows="3" placeholder="Enter review..."></textarea>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+        <!-- Game Card 7 -->
+        <div class="game-card" data-genre="action" data-title="Ultrakill">
+          <img src="Thumbnails/ultrakill.jpg" alt="Game 7" class="game-image" />
+          <p>Ultrakill</p>
+          <div class="review-form-container" style="display: none;">
+            <form class="review-form">
+              <div class="star-rating">
+                <input type="radio" id="star5-game7" name="rating-game7" value="5" />
+                <label for="star5-game7" title="5 stars">&#9733;</label>
+                <input type="radio" id="star4-game7" name="rating-game7" value="4" />
+                <label for="star4-game7" title="4 stars">&#9733;</label>
+                <input type="radio" id="star3-game7" name="rating-game7" value="3" />
+                <label for="star3-game7" title="3 stars">&#9733;</label>
+                <input type="radio" id="star2-game7" name="rating-game7" value="2" />
+                <label for="star2-game7" title="2 stars">&#9733;</label>
+                <input type="radio" id="star1-game7" name="rating-game7" value="1" />
+                <label for="star1-game7" title="1 star">&#9733;</label>
+              </div>
+              <label for="review7">Write your review:</label>
+              <textarea id="review7" name="review" rows="3" placeholder="Enter review..."></textarea>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+        <!-- Game Card 8 -->
+        <div class="game-card" data-genre="rpg" data-title="Deadspace">
+          <img src="Thumbnails/deadspace.jpg" alt="Game 8" class="game-image" />
+          <p>Deadspace</p>
+          <div class="review-form-container" style="display: none;">
+            <form class="review-form">
+              <div class="star-rating">
+                <input type="radio" id="star5-game8" name="rating-game8" value="5" />
+                <label for="star5-game8" title="5 stars">&#9733;</label>
+                <input type="radio" id="star4-game8" name="rating-game8" value="4" />
+                <label for="star4-game8" title="4 stars">&#9733;</label>
+                <input type="radio" id="star3-game8" name="rating-game8" value="3" />
+                <label for="star3-game8" title="3 stars">&#9733;</label>
+                <input type="radio" id="star2-game8" name="rating-game8" value="2" />
+                <label for="star2-game8" title="2 stars">&#9733;</label>
+                <input type="radio" id="star1-game8" name="rating-game8" value="1" />
+                <label for="star1-game8" title="1 star">&#9733;</label>
+              </div>
+              <label for="review8">Write your review:</label>
+              <textarea id="review8" name="review" rows="3" placeholder="Enter review..."></textarea>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+        <!-- Game Card 9 -->
+        <div class="game-card" data-genre="action" data-title="Doom">
+          <img src="Thumbnails/doom.jpg" alt="Game 9" class="game-image" />
+          <p>Doom Eternal</p>
+          <div class="review-form-container" style="display: none;">
+            <form class="review-form">
+              <div class="star-rating">
+                <input type="radio" id="star5-game9" name="rating-game9" value="5" />
+                <label for="star5-game9" title="5 stars">&#9733;</label>
+                <input type="radio" id="star4-game9" name="rating-game9" value="4" />
+                <label for="star4-game9" title="4 stars">&#9733;</label>
+                <input type="radio" id="star3-game9" name="rating-game9" value="3" />
+                <label for="star3-game9" title="3 stars">&#9733;</label>
+                <input type="radio" id="star2-game9" name="rating-game9" value="2" />
+                <label for="star2-game9" title="2 stars">&#9733;</label>
+                <input type="radio" id="star1-game9" name="rating-game9" value="1" />
+                <label for="star1-game9" title="1 star">&#9733;</label>
+              </div>
+              <label for="review9">Write your review:</label>
+              <textarea id="review9" name="review" rows="3" placeholder="Enter review..."></textarea>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+        <!-- Game Card 10 -->
+        <div class="game-card" data-genre="action" data-title="CS2">
+          <img src="Thumbnails/cs2.jpg" alt="Game 10" class="game-image" />
+          <p>Counter Strike 2</p>
+          <div class="review-form-container" style="display: none;">
+            <form class="review-form">
+              <div class="star-rating">
+                <input type="radio" id="star5-game10" name="rating-game10" value="5" />
+                <label for="star5-game10" title="5 stars">&#9733;</label>
+                <input type="radio" id="star4-game10" name="rating-game10" value="4" />
+                <label for="star4-game10" title="4 stars">&#9733;</label>
+                <input type="radio" id="star3-game10" name="rating-game10" value="3" />
+                <label for="star3-game10" title="3 stars">&#9733;</label>
+                <input type="radio" id="star2-game10" name="rating-game10" value="2" />
+                <label for="star2-game10" title="2 stars">&#9733;</label>
+                <input type="radio" id="star1-game10" name="rating-game10" value="1" />
+                <label for="star1-game10" title="1 star">&#9733;</label>
+              </div>
+              <label for="review10">Write your review:</label>
+              <textarea id="review10" name="review" rows="3" placeholder="Enter review..."></textarea>
+              <button type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div><!-- End of game-scroller -->
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>&copy; 2025 Play Tested | All rights reserved.</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="reviewpage.1.2.js"></script>
+
+
+
+<!-- Popup Element -->
+<div id="thank-you-popup" style="display:none;">
+  <p>Thank you for leaving a review!</p>
+  <button id="close-popup">Close</button>
+</div>
+
+<!-- jQuery Script Block -->
+<script>
+  $(document).ready(function(){
+    // When any review form is submitted
+    $('.review-form').on('submit', function(e) {
+      e.preventDefault(); // Prevent the default form submission
+      
+      
+      
+      // Show the thank you popup
+      $('#thank-you-popup').fadeIn(300).delay(2000).fadeOut(300);
+    });
+  
+    // Allow the user to manually close the popup
+    $('#close-popup').on('click', function(){
+      $('#thank-you-popup').fadeOut(300);
+    });
+  });
+</script>
+
+</body>
+</html>
